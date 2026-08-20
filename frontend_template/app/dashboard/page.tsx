@@ -87,7 +87,7 @@ export default function Dashboard() {
     setAnswers(prev => [{ question: currentQuery, answer: "" }, ...prev])
 
     try {
-      const res = await fetch("http://localhost:8000/api/ask/stream", {
+      const res = await fetch("https://sahayak-ai-65s6.onrender.com/api/ask/stream", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: currentQuery, language: "en" })
